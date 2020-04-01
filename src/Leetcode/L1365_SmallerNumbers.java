@@ -51,14 +51,17 @@ public class L1365_SmallerNumbers extends DefaultLeetcode{
         //sort array with quicksort
         quickSort(returnArray, 0, returnArray.length-1);
 
-        //create map and put in numbers
+        //Int x is a running count of how many numbers are behind current value
+        //As soon as we see a new value, we associate running count with that number
+        //This prevents counting duplicate numbers
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int x = 0; x < returnArray.length; x++) {
-            map.putIfAbsent(returnArray[x], x);
+            if(!map.containsKey(returnArray[x])){
+                map.put(returnArray[x], x);
+            }
         }
+
         //populate return array
-
-
         for(int x = 0; x < nums.length; x++){
             if(map.containsKey(nums[x])) {
                 returnArray[x] = map.get(nums[x]);
@@ -103,7 +106,7 @@ public class L1365_SmallerNumbers extends DefaultLeetcode{
         return check + 1;
     }
 
-    //first thought was this, but definitely can find better than O(n^2)
+    //My first thought was this, but definitely can find better than O(n^2)
     //I used this to check my solution for my real method instead
     public boolean test(int[] input, int[] output){
         int[] checkerArray = new int[input.length];
@@ -119,8 +122,6 @@ public class L1365_SmallerNumbers extends DefaultLeetcode{
             checkerArray[x] = total;
         }
 
-        boolean check = true;
-
         if(checkerArray.length != output.length)
             return false;
         for(int x = 0; x < checkerArray.length; x++){
@@ -130,16 +131,4 @@ public class L1365_SmallerNumbers extends DefaultLeetcode{
 
         return true;
     }
-
-    //Prints out the array in the console
-    public void printArray(int[] arr){
-        for(int x = 0; x < arr.length; x++){
-            System.out.print(arr[x] + " ");
-        }
-        System.out.println();
-    }
-
-
-
-
 }
