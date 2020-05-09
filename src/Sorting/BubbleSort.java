@@ -40,4 +40,8 @@ public class BubbleSort extends DefaultSort{
         }
     }
 
+    public String getName(){
+        return "Bubble Sort";
+    }
+
 }

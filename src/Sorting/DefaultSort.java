@@ -5,7 +5,7 @@ import java.util.Random;
 
 */
 public class DefaultSort {
-    int[] arr;
+    protected int[] arr;
 
     protected static final int DEFAULT_SIZE = 100;
     protected static final int MIN_NUM = -1000;
@@ -88,6 +88,14 @@ public class DefaultSort {
 
         //check if no numbers are introduced/removed/replaced
         return true;
+    }
+
+    public void sort(){
+        System.out.println("Error occurred");
+    }
+
+    public String getName(){
+        return "Default Sort";
     }
 
 }

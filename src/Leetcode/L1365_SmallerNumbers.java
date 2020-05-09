@@ -28,7 +28,7 @@ import java.util.Map;
 public class L1365_SmallerNumbers extends DefaultLeetcode{
 
     public L1365_SmallerNumbers(){
-        completed = false;
+        completed = true;
         ID = 1365;
         name = "How Many Numbers Are Smaller Than the Current Number";
         description = "Given the array nums, for each nums[i] find \n out how many numbers in the array are smaller than it. \n That is, for each nums[i] you have to count the \n number of valid j's such that j != i and nums[j] < nums[i].";

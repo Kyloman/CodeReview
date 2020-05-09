@@ -23,6 +23,7 @@ public class InsertionSort extends  DefaultSort {
 
     //Sorts an array using Insertion Sort
     public void sort() {
+        System.out.println("INSERTION");
         for(int x = 1; x < arr.length; x++){
             int currentIndex = x;
             while(((currentIndex >= 1) && (arr[currentIndex] <= arr[currentIndex - 1]))){
@@ -32,6 +33,10 @@ public class InsertionSort extends  DefaultSort {
                 currentIndex -= 1;
             }
         }
+    }
+
+    public String getName(){
+        return "Insertion Sort";
     }
 }
 

@@ -1,22 +1,36 @@
-import Leetcode.L1365_SmallerNumbers;
+import Leetcode.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        //CURRENT CODE TESTING
-        int[] nums = {8,1,2,2,3,5,4,2,4,5,6,7,8,4,3,2,4,5,625325};
 
-        L1365_SmallerNumbers L1365 = new L1365_SmallerNumbers();
+        int[] x = new int[3];
+        System.out.println(x.length);
+        x[x.length] = 54;
+         /*
+        L206_ReverseLinkedList testing = new L206_ReverseLinkedList();
 
-        if(L1365.test(nums,L1365.smallerNumbersThanCurrent(nums)))
-            System.out.println("Passed");
+        testing.linkedListPractice();
+
+
+        String s = "MCMXCIV";
+
+        L13_RomanToInteger test = new L13_RomanToInteger();
+
+        System.out.println(test.romanToInt(s));
+
+        Day2_HappyNumber test2 = new Day2_HappyNumber();
+        System.out.println(test2.isHappy(3));
+
+        */
+      /*
 
 
 
         //ACTUAL CODE
-        /*
+
         welcomeUser();
-        TestingClass test = new TestingClass();
+        SortingTestingClass test = new SortingTestingClass();
 
         */
     }

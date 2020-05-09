@@ -39,5 +39,10 @@ public class SelectionSort extends  DefaultSort {
             arr[smallest] = temp;
         }
     }
+
+    public String getName(){
+        return "Selection Sort";
+    }
+
 }
 
